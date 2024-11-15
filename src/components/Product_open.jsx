@@ -16,23 +16,29 @@ export default function Product_open() {
         <h2>Gaming/</h2>
         <h2>Havic HV G-92 Gamepad</h2>
       </div>
-      <div className="border-2 border-green-500 flex justify-between">
+      <div className=" flex justify-between  ">
         <div>
           {" "}
-          <img src={img} className="w-[150px] h-[138px] mt-[23px] rounded	" />
+          <img
+            src={img}
+            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
+          />
           <img
             src={Keyboardimg}
-            className="w-[150px] h-[138px] mt-[23px] rounded	"
+            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
           />
-          <img src={Ledimg} className="w-[150px] h-[138px] mt-[23px] rounded	" />
+          <img
+            src={Ledimg}
+            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
+          />
           <img
             src={Frameimg}
-            className="w-[150px] h-[138px] mt-[23px] rounded	"
+            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
           />
         </div>
-        <div className="h-[600px] w-[76%] flex justify-between">
-          <img src={img} className="w-[400px] h-[440px]" />
-          <div className=" h-[400px] w-[380px]">
+        <div className="h-[600px] w-[76%] flex justify-between  qs:h-[300px] qs:w-[100%] qs:mt-11">
+          <img src={img} className="w-[400px] h-[440px] qs:h-60 bg-slate-100 qs:bg-white" />
+          <div className=" h-[400px] w-[380px] qs:-ml-[340px]  qs:mt-96">
             <h1 className="font_3">Havic HV G-92 Gamepad</h1>
             <div className=" center w-[229px] h-5 mt-1">
               <FaStar />
@@ -108,7 +114,7 @@ export default function Product_open() {
         </div>
       </div>
 
-      <div className="w-[100px] h-10 center gap-4 ">
+      <div className="w-[100px] h-10 center gap-4 qs:mt-[590px]">
         <p className="border bg-primary w-5 h-10"></p>
         <span className="text-sm text-primary">Related Item</span>
       </div>
@@ -187,7 +193,6 @@ export default function Product_open() {
         </div>
       </div>
       <Footer />
-
     </>
   );
 }

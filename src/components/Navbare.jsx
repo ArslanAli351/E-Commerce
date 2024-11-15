@@ -20,7 +20,7 @@ export default function Navbare() {
     <>
       <div className=" border  center border-t-0	border-l-0	 border-r-0	">
         <div className=" h-[38px]	 mt-[88px]  ">
-          <h1 className="w-[118px] h-6 font_2 qs:ml-[290px] qs:-mt-6 qs:absolute">
+          <h1 className="w-[118px] h-6 font_2 qs:ml-[310px] qs:-mt-6 qs:absolute">
             Exclusive
           </h1>
           <div className="w-60 px-2 h-[36px] -mt-7 rounded center bg-[#F5F5F5]  ml-64  qs:hidden">
@@ -32,7 +32,7 @@ export default function Navbare() {
             <CiSearch className="text-3xl" />
           </div>
 
-          <div className=" h-6 bg-white w-96 -mt-7 ml-[580px] ">
+          <div className=" h-6 bg-white w-96 -mt-7 ml-[580px] qs:ml-[570px] ">
             <ul className="hidden md:flex items-center	 gap-5">
               {links.map((items, i) => (
                 <li
@@ -60,7 +60,7 @@ export default function Navbare() {
               )}
             </ul>
             <button
-              className="border-2 text-4xl md:hidden "
+              className="border-2 text-4xl md:hidden qs:-ml-3"
               onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
             >
               {isHamburgerOpen ? <AiOutlineCloseSquare /> : <GiHamburgerMenu />}
@@ -85,7 +85,7 @@ export default function Navbare() {
               </div>
             )}
             {!isLoggedIn ? (
-              <span className="bg-primary text-white rounded-full w-8 h-8 center ml-72 -mt-7 qs:ml-16 qs:-mt-10 ">
+              <span className="bg-primary text-white rounded-full w-8 h-8 center ml-72 -mt-7 qs:ml-11 qs:-mt-10 ">
                 <FaRegUser className=" text-[15px]  " />
               </span>
             ) : null}

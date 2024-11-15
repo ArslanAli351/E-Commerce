@@ -13,7 +13,7 @@ export default function All_product(){
     return(<>
       <Navbare />
 
-  <div className="mt-[140px]   w-[90%] ml-[70px]">
+  <div className="mt-[140px]   w-[90%] ml-[70px] qs:border-2 qs:ml-4">
         <div >
           <div className="w-[100px] h-10 ">
             <span className="text-sm font_1">Wishlist (4)</span>
@@ -103,7 +103,7 @@ export default function All_product(){
       </div>
 
 
-      <div className="mt-[140px]   w-[90%] ml-[70px]">
+      <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-4">
         <div >
           <div className="w-[100px] h-10 center gap-4  ">
             <p className=" bg-primary w-5 h-10 "></p>
