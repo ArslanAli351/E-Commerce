@@ -8,7 +8,7 @@ import Benar from "../assets/baner.png"
 
 export default function Best_Product(){
     return(<>
-    <div className="mt-[140px]   w-[90%] ml-[70px]">
+    <div className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5">
         <div >
           <div className="w-[100px] h-10 center gap-4 ">
             <p className=" bg-primary w-5 h-10 "></p>
@@ -21,7 +21,7 @@ export default function Best_Product(){
           </button>
         </div>
         </div>
-        <div className="center flex-wrap	gap-10">
+        <div className="center flex-wrap	gap-10 ">
           <div className="group border-2 flex gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[350px] ">
             <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
               -40%
@@ -101,8 +101,8 @@ export default function Best_Product(){
 
 
 
-      <div className="mt-[140px]   w-[90%] ml-[70px]">
-        <img src={Benar} alt="" />
+      <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
+        <img src={Benar}  />
       </div>
     </>)
 }

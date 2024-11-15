@@ -9,6 +9,13 @@ export default {
       colors: {
         primary: "var(--primary)",
       },
+      screens: {
+        qs: { max: "530px" },
+
+        xs: "320px",
+        mm: "375px",
+      },
+
     },
   },
   plugins: [],

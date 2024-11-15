@@ -10,7 +10,7 @@ import Frameimg from "../assets/Frame 570.png";
 export default function Explore_Product(){
 
     return(<>
-<div className="mt-[80px]   w-[90%] ml-[70px]">
+<div className="mt-[80px]   w-[90%] ml-[70px] qs:border qs:ml-4">
         <div >
           <div className="w-[130px] h-10 center gap-4 ">
             <p className="border bg-primary w-5 h-10 "></p>

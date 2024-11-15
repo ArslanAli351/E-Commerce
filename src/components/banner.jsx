@@ -5,9 +5,9 @@ export default function Banner() {
     <>
       <div className=" bg-black	center	 border-black	border-2 h-12">
         <p className="text-white text-sm  w-[70%]  has-[18px]  gap-[31px] font_1">
-          Summer Sale For All Swim Suits And Free Express Delivery - OFF
-          50%!ShopNow
-          <span className="ml-3 underline underline-offset-1	font-semibold	">
+          Summer Sale For All Swim Suits<span className="qs:hidden"> And Free Express  Delivery - OFF
+          50%!ShopNow</span>
+          <span className="ml-3 underline underline-offset-1	font-semibold	qs:hidden">
             ShopNow
           </span>
         </p>

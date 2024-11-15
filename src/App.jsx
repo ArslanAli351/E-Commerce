@@ -2,36 +2,56 @@
 
 import Banner from "./components/banner";
 import Navbare from "./components/Navbare";
-// import HeroSection from "./components/HeroSection";
-// import Product_Card from "./components/Product_Card";
-// import Product_Category from "./components/Product_Category";
-// import Best_Product from "./components/Best_Product";
-// import Explore_Product from "./components/Explore_product";
-// import Featured_Product from "./components/Featured_product";
-// import Footer from "./components/Footer";
 
-import { Routes, Route, Outlet, Link } from "react-router-dom";
+import { Routes, Route, Outlet, Link, Navigate } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Contact from "./Pages/Contact.jsx";
+import Login from "./Pages/Login.jsx";
+import SignUp from "./Pages/SignUp.jsx";
+import Not_Found from "./components/Not_Found.jsx";
 function App() {
+  const isLoggedIn = false;
   return (
     <>
       <Banner />
       <Navbare />
-
       <Routes>
         <Route path="/" index element={<Home />} />
+        <Route path="/not-found" element={<Not_Found />} />
+
+        {isLoggedIn ? (
+          <>
+            <Route path="/signUp" index element={<SignUp />} />
+
+            <Route path="/contact" index element={<Contact />} />
+            <Route path="/about" index element={<About />} />
+            <Route
+              path="/login"
+              index
+              element={<Navigate to="/" replace={true} />}
+            />
+            <Route
+              path="*"
+              index
+              element={<Navigate to="/not-found" replace={true} />}
+            />
+          </>
+        ) : (
+          <>
+            {" "}
+            <Route path="/login" index element={<Login />} />
+            <Route
+              path="*"
+              index
+              element={<Navigate to="/login" replace={true} />}
+            />
+          </>
+        )}
+        {/* <Route path="/about" index element={<About />} />
+        <Route path="/contact" index element={<Contact />} /> */}
+        {/* <Route path="/login" index element={<Login />} /> */}
       </Routes>
-
-
-
-      
-      {/* <HeroSection/>
-      <Product_Card />
-      <Product_Category />
-      <Best_Product />
-      <Explore_Product/>
-      <Featured_Product />
-      <Footer /> */}
     </>
   );
 }
