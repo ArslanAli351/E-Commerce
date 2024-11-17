@@ -1,10 +1,14 @@
 import Frame from "../assets/Frame 721.png";
 import img from "../assets/icon-send.png";
+import { FaArrowUp } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <>
-      <div className="mt-[80px] border-2 h-[440px] bg-black text-white flex gap-[87px] p-7 qs:flex-col qs:h[600px]">
+    <div className=" flex justify-end mt-[80px]">
+    <a href="#top"><div className="w-12 border-2 rounded-full bg-[#F5F5F5] h-12 center text-2xl	"><FaArrowUp />
+    </div></a></div>
+      <div className=" border-2 h-[440px] bg-black text-white flex gap-[87px] p-7 qs:flex-col qs:h[600px]">
         <div className="w-[217px]  h-[188px] gap-4 flex flex-col mt-[120px]     qs:w-[300px] qs:mt-0 ">
           <h1 className="font-bold	font_3">Exclusive</h1>
           <p>Subscribe</p>

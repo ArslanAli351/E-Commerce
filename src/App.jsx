@@ -11,7 +11,7 @@ import Login from "./Pages/Login.jsx";
 import SignUp from "./Pages/SignUp.jsx";
 import Not_Found from "./components/Not_Found.jsx";
 function App() {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
     <>
       <Banner />
@@ -52,6 +52,7 @@ function App() {
         <Route path="/contact" index element={<Contact />} /> */}
         {/* <Route path="/login" index element={<Login />} /> */}
       </Routes>
+      
     </>
   );
 }

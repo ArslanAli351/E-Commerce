@@ -8,6 +8,7 @@
 
 * {
   --primary: #db4444;
+  scroll-behavior: smooth;
 }
 .font_1 {
   font-family: "Poppins", sans-serif;
@@ -31,7 +32,8 @@
   align-items: center;
 }
 
-td,th {
+td,
+th {
   text-align: left;
   padding: 8px;
 }
@@ -58,4 +60,26 @@ td,th {
     margin-top: 200px;
     margin-left: 20px;
   }
+}
+.container-x {
+  /* border: 1px solid red; */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+.S_Underline:after {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 2px;
+  height: 0.125rem;
+  width: 0;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.4s;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+
+.ul li{
+  list-style: circle;
 }

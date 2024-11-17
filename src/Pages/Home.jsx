@@ -9,23 +9,25 @@ import All_product from "../components/All_products";
 import Quantity from "../components/Quantity";
 import Product_open from "../components/Product_open";
 import Slider from "../components/Slider.jsx";
-// import Slider_product from "./components/Slider_product";
+import NewArrivalGrid from "../components/NewArrivalGrid.jsx";
 export default function Home() {
   return (
     <>
-    
-      <HeroSection />
-      <Slider />
-      <Product_Card />
-      <Product_Category />
-      <Best_Product />
-      <Explore_Product />
-      <Featured_Product />
-      <Footer />
-      <All_product/>
-      <Quantity />
-      <Product_open/>
-      
+      <div className="container-x">
+        
+        <HeroSection />
+        <Slider />
+        <Product_Card />
+        <Product_Category />
+        <Best_Product />
+        <Explore_Product />
+        <Featured_Product />
+        <Footer />
+        <All_product />
+        <Quantity />
+        <Product_open />
+        <NewArrivalGrid />
+      </div>
     </>
   );
 }

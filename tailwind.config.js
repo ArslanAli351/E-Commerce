@@ -15,6 +15,13 @@ export default {
         xs: "320px",
         mm: "375px",
       },
+      listStyleType: {
+        none: 'none',
+        disc: 'disc',
+        decimal: 'decimal',
+        square: 'square',
+        roman: 'upper-roman',
+      }
 
     },
   },
