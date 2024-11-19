@@ -20,7 +20,7 @@ export default function Product_Category() {
           <h1 className="w-[211px h-12 font_3 text-[30px]">
             Browse By Category
           </h1>
-          <div className=" flex justify-end   absolute ml-[950px] 	-mt-[35px] gap-2 qs:mt-0	qs:ml  -0	">
+          <div className=" flex justify-end   absolute ml-[950px] 	-mt-[35px] gap-2 qs:mt-0	qs:ml  -0	qs:hidden">
             <span className="rounded-full bg-[#F5F5F5] ">
               <FaArrowLeft />
             </span>

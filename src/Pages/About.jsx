@@ -43,7 +43,7 @@ export default function About() {
 
         <h1 className="font-bold">Why Shop With Us?</h1>
 
-        <ul className=" flex flex-col gap-4 a">
+        <ul className=" flex flex-col gap-4 list-disc	">
           <li className="a">
             <span className="font-semibold"> Curated Selection</span> : We
             carefully select every product we sell, ensuring it meets our high

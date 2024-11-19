@@ -9,12 +9,10 @@ import All_product from "../components/All_products";
 import Quantity from "../components/Quantity";
 import Product_open from "../components/Product_open";
 import Slider from "../components/Slider.jsx";
-import NewArrivalGrid from "../components/NewArrivalGrid.jsx";
 export default function Home() {
   return (
     <>
       <div className="container-x">
-        
         <HeroSection />
         <Slider />
         <Product_Card />
@@ -26,7 +24,6 @@ export default function Home() {
         <All_product />
         <Quantity />
         <Product_open />
-        <NewArrivalGrid />
       </div>
     </>
   );

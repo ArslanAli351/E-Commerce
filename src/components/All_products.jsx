@@ -20,7 +20,7 @@ export default function All_product(){
           </div>
           <h1 className="w-[211px h-12 font_3 text-[30px] font_3">Best Selling Products</h1>
           <div className="center font_1 ml-[860px] -mt-[150px] absolute">
-          <button className="text-xs border-2	mt-8 rounded w-[134px] h-[56px]">
+          <button className="text-xs border-2	mt-8 rounded w-[134px] h-[56px] qs:hidden">
           Move All To Bag          </button>
         </div>
         </div>
@@ -73,6 +73,7 @@ export default function All_product(){
             </p>
 
             <p>stars</p>
+ 
           </div>
           <div className="group border-2 flex gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[350px]">
             <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
@@ -97,7 +98,9 @@ export default function All_product(){
 
             <p>stars</p>
           </div>
-          
+          <button className="lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white">
+            Move All To Bag      
+                </button>
         </div>
        
       </div>
@@ -111,7 +114,7 @@ export default function All_product(){
           </div>
           <h1 className="w-[211px h-12 font_3 text-[30px] font_3">Best Selling Products</h1>
           <div className="center font_1 ml-[860px] -mt-28 absolute">
-          <button className="text-xs	mt-8 rounded w-[104px] h-[56px] border-2">
+          <button className="text-xs	mt-8 rounded w-[104px] h-[56px] border-2 qs:hidden">
           See All          </button>
         </div>
         </div>
@@ -188,7 +191,10 @@ export default function All_product(){
 
             <p>stars</p>
           </div>
-          
+          <div className="center font_1 ">
+          <button className="lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white">
+          See All          </button>
+        </div>
         </div>
        
       </div>

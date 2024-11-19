@@ -17,7 +17,7 @@ export default function Explore_Product(){
             <span className="text-sm text-primary ">Our Products</span>
           </div>
           <h1 className="w-[211px h-12 font_3 text-[30px]">Explore Our Products</h1>
-          <div className=" flex justify-end  ml-[950px] absolute	-mt-20 gap-2		">
+          <div className=" flex justify-end  ml-[950px] absolute	-mt-20 gap-2	qs:hidden	">
             <span className="rounded-full bg-[#F5F5F5] ">
               <FaArrowLeft />
             </span>
