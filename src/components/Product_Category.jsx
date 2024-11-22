@@ -6,11 +6,22 @@ import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { TbDeviceWatchStats } from "react-icons/tb";
 import { CiCamera } from "react-icons/ci";
 import img from "../assets/Category-Gamepad.png"
+import { Link } from "react-router-dom";
+
 export default function Product_Category() {
   return (
     <>
+     <div className="center ">
+          <Link
+            to={"/Product-API"}
+            className=" center font_1 text-xs	mt-8 rounded bg-primary text-white w-[234px] h-[56px]"
+          >
+            {" "}
+            view all products
+          </Link>
+        </div>
       <div className=" mt-[80px]   w-[90%] ml-[70px] border qs:ml-6"></div>
-
+     
       <div className=" mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
         <div className="w-full h-[313px]  qs:h-[600px] qs:flex qs:flex-col ">
           <div className="flex gap-4 ">

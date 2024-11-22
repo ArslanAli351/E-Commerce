@@ -3,6 +3,8 @@ import img from "../assets/game.png";
 import Keyboardimg from "../assets/Keyboard img.png";
 import Ledimg from "../assets/Led img.png";
 import Benar from "../assets/baner.png"
+import Product_Card from "./Product_Card";
+import { Link } from "react-router-dom";
 
 
 
@@ -17,90 +19,18 @@ export default function Best_Product(){
           </div>
           <h1 className=" h-12 font_3 text-[30px]  font_3">Best Selling Products</h1>
           <div className="center font_1 ml-[860px] -mt-28 absolute qs:hidden	">
-          <button className="text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 ">
-            view all products
-          </button>
-        </div>
-        </div>
-        <div className="center flex-wrap	gap-10 ">
-          <div className="group border-2 flex gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[350px] ">
-            <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
-              -40%
-            </div>
-
-            <div className="mt-9">
-              <img
-                src={img}
-                alt="product img"
-                className="m-auto group-hover:scale-110 transition-all duration-300"
-              />
-            </div>
-
-            <h3 className="font-medium group-hover:text-primary transition-all duration-300">
-              HAVIT HV-G92 Gamepad
-            </h3>
-
-            <p>
-              <span className="text-primary">$120</span> <span>$160</span>
-            </p>
-
-            <p>stars</p>
-          </div>
-
-          <div className="group border-2 flex gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[350px]">
-            <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
-              -40%
-            </div>
-
-            <div className="mt-11">
-              <img
-                src={Keyboardimg}
-                alt="product img"
-                className="m-auto group-hover:scale-110 transition-all duration-300"
-              />
-            </div>
-            <div className="w-[250px] h-10 center bg-black text-white">
-              <p> Add to cart</p>
-            </div>
-            <h3 className="font-medium group-hover:text-primary transition-all duration-300">
-              HAVIT HV-G92 Gamepad
-            </h3>
-
-            <p>
-              <span className="text-primary">$960</span> <span>$1160</span>
-            </p>
-
-            <p>stars</p>
-          </div>
-          <div className="group border-2 flex gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[350px]">
-            <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
-              -40%
-            </div>
-
-            <div className="mt-11">
-              <img
-                src={Ledimg}
-                alt="product img"
-                className="m-auto group-hover:scale-110 transition-all duration-300"
-              />
-            </div>
-
-            <h3 className="font-medium group-hover:text-primary transition-all duration-300">
-              HAVIT HV-G92 Gamepad
-            </h3>
-
-            <p>
-              <span className="text-primary">$320</span> <span>$660</span>
-            </p>
-
-            <p>stars</p>
-          </div>
           
+          <Link
+            to={"/Product-API"}
+            className="center  text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 "
+          >
+            {" "}
+            view all products
+          </Link>
+        </div>
         </div>
        
-      </div>
-
-
+<Product_Card />
       <div className="center font_1 lg:hidden md:hidden	sm:hidden">
           <button className="text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 ">
             view all products
@@ -108,6 +38,6 @@ export default function Best_Product(){
         </div>
       <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
         <img src={Benar}  />
-      </div>
+      </div></div>
     </>)
 }

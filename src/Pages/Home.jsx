@@ -9,12 +9,14 @@ import All_product from "../components/All_products";
 import Quantity from "../components/Quantity";
 import Product_open from "../components/Product_open";
 import Slider from "../components/Slider.jsx";
+// import MoreProducts from "../components/MoreProducts.jsx";
 export default function Home() {
   return (
     <>
       <div className="container-x">
         <HeroSection />
         <Slider />
+        {/* <MoreProducts />  */}
         <Product_Card />
         <Product_Category />
         <Best_Product />
@@ -24,6 +26,7 @@ export default function Home() {
         <All_product />
         <Quantity />
         <Product_open />
+       
       </div>
     </>
   );

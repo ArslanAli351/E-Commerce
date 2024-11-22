@@ -1,5 +1,6 @@
 import img from "../assets/game.png";
-
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 function Product() {
   return (
     <>
@@ -79,6 +80,23 @@ export default function Slider() {
           <SwiperSlide>{Product()}</SwiperSlide>
         </Swiper>
       </div>
+
+      <div className="mt-[80px] border-2 border-b-0  w-[90%] ml-[70px]  qs:ml-[19px]">
+        <div className="qs:center ">
+          <div className="w-[100px] h-10 center gap-4  ">
+            <p className="border bg-primary w-5 h-10 flex"></p>
+            <span className="text-sm text-primary">Today’s</span>
+          </div>
+          <h1 className="w-[211px h-12 font_3 text-[30px]">Flash Sales</h1>
+          <div className=" flex justify-end  ml-[950px] absolute	-mt-20 gap-2		qs:hidden">
+            <span className="rounded-full bg-[#F5F5F5] ">
+              <FaArrowLeft />
+            </span>
+            <span className="rounded-full bg-[#F5F5F5] ">
+              <FaArrowRight />
+            </span>
+          </div>
+        </div></div>
     </>
   );
 }

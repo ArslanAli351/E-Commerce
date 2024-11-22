@@ -10,8 +10,10 @@ import Contact from "./Pages/Contact.jsx";
 import Login from "./Pages/Login.jsx";
 import SignUp from "./Pages/SignUp.jsx";
 import Not_Found from "./components/Not_Found.jsx";
+import Product_API from "./Pages/Product_API.jsx";
+import Product_open from "./components/Product_open.jsx";
 function App() {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
     <>
       <Banner />
@@ -19,10 +21,14 @@ function App() {
       <Routes>
         <Route path="/" index element={<Home />} />
         <Route path="/not-found" element={<Not_Found />} />
+        <Route path="/Product-API" element={<Product_API/>} />
+
 
         {isLoggedIn ? (
           <>
             <Route path="/signUp" index element={<SignUp />} />
+
+            <Route path="/Product_open" index element={<Product_open />} />
 
             <Route path="/contact" index element={<Contact />} />
             <Route path="/about" index element={<About />} />

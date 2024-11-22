@@ -54,7 +54,7 @@ export default function Product_open() {
             <p className="mt-1">$192.00</p>
             <p className="w-[373px] mt-5">
               PlayStation 5 Controller Skin High quality vinyl with air channel
-              adhesive for easy bubble free install & mess free removal Pressure
+              adhesive for easy bubble free all & mess free removal Pressure
               sensitive.
             </p>
             <p className="w-[373px] boder-2"></p>
