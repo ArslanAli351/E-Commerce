@@ -10,25 +10,25 @@ export default function Product_Card({}) {
   const ProductsData = [
     {
       name: "HAVIT HV-G92 Gamepad",
-      image: { img },
+      image: img,
       price: "$50",
       rating: "2",
     },
     {
       name: "AK-900 Wired Keyboard",
-      image: { Keyboardimg },
+      image: Keyboardimg,
       price: "$120",
       rating: "4.2",
     },
     {
       name: "IPS LCD Gaming Monitor",
-      image: { Ledimg },
+      image: Ledimg,
       price: "$150",
       rating: "2.7",
     },
     {
       name: "S-Series Comfort Chair ",
-      image: { Frameimg },
+      image: Frameimg,
       price: "$180",
       rating: "3",
     },
@@ -36,7 +36,6 @@ export default function Product_Card({}) {
   return (
     <>
       <div className=" mt-8  w-[90%] ml-[70px]  qs:ml-[19px]">
-    
         <div className="0 flex justify-evenly flex-wrap gap-10 items-center">
           {ProductsData.map((item) => (
             <div className="flex flex-wrap	gap-10 ">
@@ -76,7 +75,6 @@ export default function Product_Card({}) {
             </div>
           ))}
         </div>
-       
       </div>{" "}
     </>
   );

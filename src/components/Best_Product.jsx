@@ -24,7 +24,6 @@ export default function Best_Product(){
             to={"/Product-API"}
             className="center  text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 "
           >
-            {" "}
             view all products
           </Link>
         </div>
@@ -32,9 +31,13 @@ export default function Best_Product(){
        
 <Product_Card />
       <div className="center font_1 lg:hidden md:hidden	sm:hidden">
-          <button className="text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 ">
+         
+          <Link
+            to={"/Product-API"}
+            className="center font_1 text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-primary "
+          >
             view all products
-          </button>
+          </Link>
         </div>
       <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
         <img src={Benar}  />
