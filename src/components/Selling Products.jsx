@@ -1,35 +1,38 @@
-import img from "../assets/game.png";
-import Keyboardimg from "../assets/Keyboard img.png";
-import Ledimg from "../assets/Led img.png";
-import Benar from "../assets/baner.png";
-import Product_Card from "./Product_Card";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 import useProduct from "./hooks/useProducts";
 import ReactStars from "react-stars";
 
-export default function Best_Product() {
-  const { products, loading, error } = useProduct("limit=4&&skip=45");
+export default function SellingProduct() {
+  const { products, loading, error } = useProduct("limit=4&&skip=120");
+
   return (
     <>
-      <div className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
+      <Link
+        to={"/Product-API"}
+        className=" center font_1 lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white"
+      >
+        Move All To Bag
+      </Link>
+
+      <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-4">
         <div>
-          <div className="w-[100px] h-10 center gap-4 ">
+          <div className="w-[100px] h-10 center gap-4  ">
             <p className=" bg-primary w-5 h-10 "></p>
-            <span className="text-sm text-primary">This Month</span>
+            <span className="text-sm text-primary ">Just For You</span>
           </div>
-          <h1 className=" h-12 font_3 text-[30px]  font_3">
+          <h1 className="w-[211px h-12 font_3 text-[30px] font_3">
             Best Selling Products
           </h1>
-          <div className="center font_1 ml-[860px] -mt-28 absolute qs:hidden	">
+          <div className="center font_1 ml-[860px] rounded  -mt-28 absolute hover:bg-primary h-[56px]  hover:text-white">
             <Link
               to={"/Product-API"}
-              className="center  text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-slate-500 "
+              className=" center font_1 text-xs rounded w-[104px] h-[56px] border-2 qs:hidden"
             >
-              view all products
+              See All
             </Link>
           </div>
         </div>
-
         <div className=" flex justify-evenly flex-wrap gap-10 items-center  ">
           {loading ? "loading...." : null}
           {error}
@@ -70,19 +73,17 @@ export default function Best_Product() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="center font_1 lg:hidden md:hidden	sm:hidden">
+        </div>{" "}
+        <div className="center font_1 ">
           <Link
             to={"/Product-API"}
-            className="center font_1 text-xs	mt-8 rounded bg-primary text-white w-[134px] h-[56px] qs:bg-primary "
+            className=" center font_1 lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white"
           >
-            view all products
+            See All
           </Link>
         </div>
-        <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
-          <img src={Benar} />
-        </div>
       </div>
+      <Footer />
     </>
   );
 }

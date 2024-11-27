@@ -9,6 +9,7 @@ import All_product from "../components/All_products";
 import Quantity from "../components/Quantity";
 import Product_open from "../components/Product_open";
 import Slider from "../components/Slider.jsx";
+import SellingProduct from "../components/Selling Products.jsx";
 // import MoreProducts from "../components/MoreProducts.jsx";
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Featured_Product />
         <Footer />
         <All_product />
+        <SellingProduct/>
         <Quantity />
         <Product_open />
        

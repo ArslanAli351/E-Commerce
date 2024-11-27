@@ -5,23 +5,28 @@ import { CiMobile4 } from "react-icons/ci";
 import { HiOutlineComputerDesktop } from "react-icons/hi2";
 import { TbDeviceWatchStats } from "react-icons/tb";
 import { CiCamera } from "react-icons/ci";
-import img from "../assets/Category-Gamepad.png"
+import img from "../assets/Category-Gamepad.png";
 import { Link } from "react-router-dom";
 
+
 export default function Product_Category() {
+
+
+
+
   return (
     <>
-     <div className="center ">
-          <Link
-            to={"/Product-API"}
-            className=" center font_1 text-xs	mt-8 rounded bg-primary text-white w-[234px] h-[56px]"
-          >
-            {" "}
-            view all products
-          </Link>
-        </div>
+      <div className="center ">
+        <Link
+          to={"/Product-API"}
+          className=" center font_1 text-xs	mt-8 rounded bg-primary text-white w-[234px] h-[56px]"
+        >
+          {" "}
+          view all products
+        </Link>
+      </div>
       <div className=" mt-[80px]   w-[90%] ml-[70px] border qs:ml-6"></div>
-     
+
       <div className=" mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
         <div className="w-full h-[313px]  qs:h-[600px] qs:flex qs:flex-col ">
           <div className="flex gap-4 ">
@@ -41,7 +46,7 @@ export default function Product_Category() {
           </div>
 
           <div className=" h-[145px] flex gap-7 qs:flex-wrap qs:justify-center mt-10 qs:h-[600px]  ">
-            <div className="w-[170px] h-[145px] border-2 center flex-col qs:h-28 qs:w-32" >
+            <div className="w-[170px] h-[145px] border-2 center flex-col qs:h-28 qs:w-32">
               <CiMobile4 className="w-14 h-14" />
               <p>phones</p>
             </div>
@@ -69,7 +74,7 @@ export default function Product_Category() {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 }

@@ -1,13 +1,12 @@
 import { CiSearch } from "react-icons/ci";
 import { IoMdHeartEmpty } from "react-icons/io";
-
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { useState } from "react";
-
+import { handleClick } from "../Pages/Login";
 export default function Navbare() {
   const links = [
     { title: "Home", link: "/" },
@@ -57,7 +56,7 @@ export default function Navbare() {
                     <Link
                       to={"/login"}
                       className="hover:underline  hover:text-primary font_1 "
-                    >
+      onClick={handleClick}     >
                       Login
                     </Link>
                     {/* <span className="bg-primary text-white rounded-full w-8 h-8 center">

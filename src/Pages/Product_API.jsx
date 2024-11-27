@@ -2,16 +2,10 @@ import MoreProducts from "../components/MoreProducts";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Product_Card from "../components/Product_Card";
+import useProduct from "../components/hooks/useProducts";
 export default function Product_API() {
-  const API_key = "https://dummyjson.com/products";
-  const [products, setProducts] = useState(null);
-  const getProductData = async () => {
-    const response = await axios(API_key);
-    setProducts(response?.data?.products);
-  };
-  useEffect(() => {
-    getProductData();
-  }, []);
+  const { products, loading, error } = useProduct();
+
   const [searchTrem, setSearchTerm] = useState("");
   const [Trem, setTerm] = useState("");
 
@@ -61,9 +55,9 @@ export default function Product_API() {
         placeholder="Search your product"
       />
 
-      {products === null ? "Loading...." : null}
-
-      <div className="aa mt-[80px] border-2   w-[90%] ml-[70px]  qs:ml-[19px] flex flex-wrap justify-evenly gap-10">
+      {loading ? "Loading...." : null}
+      {error}
+      <div className="aa mt-[80px]   w-[90%] ml-[70px]  qs:ml-[19px] flex flex-wrap justify-evenly gap-10">
         {searchResult?.map((item) => (
           <MoreProducts
             key={item.id}
