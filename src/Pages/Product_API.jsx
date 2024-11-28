@@ -66,6 +66,7 @@ export default function Product_API() {
             price={item.price}
             discount={item.discountPercentage}
             rating={item.rating}
+            id={item.id}
           />
         ))}
       </div>

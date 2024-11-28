@@ -6,13 +6,14 @@ import Ledimg from "../assets/Led img.png";
 import Frameimg from "../assets/Frame 570.png";
 import ReactStars from "react-stars";
 import useProduct from "./hooks/useProducts";
+import { Link } from "react-router-dom";
 
-export default function Product_Card({}) {
+export default function Product_Card({id}) {
   const { products, loading, error } = useProduct("limit=4&&skip=83");
 
   return (
     <>
-      <div className=" mt-8  w-[90%] ml-[70px]  qs:ml-[19px] ">
+      <Link to={`/product/${id}`} className=" mt-8  w-[90%] ml-[70px]  qs:ml-[19px] ">
         <div className=" flex justify-evenly flex-wrap gap-10 items-center  ">
           {loading ? "loading...." : null}
           {error}
@@ -54,7 +55,7 @@ export default function Product_Card({}) {
             </div>
           ))}
         </div>
-      </div>{" "}
+      </Link>{" "}
     </>
   );
 }

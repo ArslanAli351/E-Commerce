@@ -1,5 +1,5 @@
 // https://www.figma.com/design/tFKYEH6oPfC1LVGhqisYgg/E-commerce?node-id=0-1&node-type=canvas&t=ddarVHE5rq0EQgcE-0
-
+// https://www.youtube.com/watch?v=vo-qY8VHihM
 import Banner from "./components/banner";
 import Navbare from "./components/Navbare";
 
@@ -11,7 +11,8 @@ import Login from "./Pages/Login.jsx";
 import SignUp from "./Pages/SignUp.jsx";
 import Not_Found from "./components/Not_Found.jsx";
 import Product_API from "./Pages/Product_API.jsx";
-import Product_open from "./components/Product_open.jsx";
+import ProductDetail from "./components/ProductDetail.jsx";
+// import Product_open from "./components/Product_open.jsx";
 function App() {
   const isLoggedIn = false;
   return (
@@ -22,13 +23,14 @@ function App() {
         <Route path="/" index element={<Home />} />
         <Route path="/not-found" element={<Not_Found />} />
         <Route path="/Product-API" element={<Product_API/>} />
+        <Route path="/Product/:id" element={<ProductDetail/>} />
 
 
         {isLoggedIn ? (
           <>
             <Route path="/signUp" index element={<SignUp />} />
 
-            <Route path="/Product_open" index element={<Product_open />} />
+            {/* <Route path="/Product_open" index element={<Product_open />} /> */}
 
             <Route path="/contact" index element={<Contact />} />
             <Route path="/about" index element={<About />} />
@@ -54,12 +56,12 @@ function App() {
             />
           </>
         )}
-        {/* <Route path="/about" index element={<About />} />
-        <Route path="/contact" index element={<Contact />} /> */}
-        {/* <Route path="/login" index element={<Login />} /> */}
+      
       </Routes>
     </>
   );
 }
 
 export default App;
+
+

@@ -56,7 +56,8 @@ export default function Navbare() {
                     <Link
                       to={"/login"}
                       className="hover:underline  hover:text-primary font_1 "
-      onClick={handleClick}     >
+      // onClick={handleClick}    
+       >
                       Login
                     </Link>
                     {/* <span className="bg-primary text-white rounded-full w-8 h-8 center">

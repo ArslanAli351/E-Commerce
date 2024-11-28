@@ -10,11 +10,13 @@ export default function MoreProducts({
   discount,
   reviews,
   rating,
+  id
 }) {
+  
   return (
     <>
     
-           <div className="center flex-wrap	gap-10 ">
+           <Link to={`/product/${id}`} className="center flex-wrap	gap-10 ">
           <div className="group border-2 flex  gap-4 flex-col relative bg-[#F5F5F5] w-64 h-[390px] ">
             <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
               -{discount}%
@@ -47,7 +49,7 @@ export default function MoreProducts({
               />
               <span className="text-[#000000]">({rating})</span>
             </p>
-</div></div>
+</div></Link>
     </>
   );
 }

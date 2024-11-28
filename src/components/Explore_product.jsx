@@ -33,6 +33,7 @@ export default function Explore_Product() {
           {loading ? "loading...." : null}
           {error}
           {products?.map((item) => (
+         
             <div className="flex flex-wrap	gap-10  ">
               <div className="group border-2 flex   gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[380px] ">
                 <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
@@ -78,8 +79,10 @@ export default function Explore_Product() {
             {" "}
             view all products
           </Link>
+          
         </div>
       </div>
+      
     </>
   );
 }

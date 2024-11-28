@@ -1,3 +1,6 @@
+// ========== Use SWR WEBSITE ==========
+
+
 import img from "../assets/game.png";
 import Keyboardimg from "../assets/Keyboard img.png";
 import Ledimg from "../assets/Led img.png";
@@ -5,57 +8,65 @@ import Frameimg from "../assets/Frame 570.png";
 import { FaStar } from "react-icons/fa";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useState } from "react";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
+import { useParams } from "react-router-dom";
+import useSWR from 'swr'
+import axios from "axios";
+import ReactStars from "react-stars";
 
-export default function Product_open() {
+export default function ProductDetail() {
   const [count, setCount] = useState(0);
+  const params=useParams()
+  const { data, error, isLoading } = useSWR(`https://dummyjson.com/products/${params.id}`, axios)
+  const product=data?.data;  
+  const [selectImage,setSelectImage]=useState()
+console.log(product);
+
   return (
     <>
-      <div className="flex">
+      {/* <div className="flex">
         <h2>Account/</h2>
         <h2>Gaming/</h2>
         <h2>Havic HV G-92 Gamepad</h2>
-      </div>
+      </div> */}
       <div className=" flex justify-between  ">
-        <div>
-          {" "}
+        {product?.images?.length>1 ?
+        <div >
+          { product?.images.map((image,i)=>(<>
+         
           <img
-            src={img}
+          key={i}
+            src={image}
             className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
+            onMouseOver={()=>setSelectImage(image)
+            }
           />
-          <img
-            src={Keyboardimg}
-            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
-          />
-          <img
-            src={Ledimg}
-            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
-          />
-          <img
-            src={Frameimg}
-            className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
-          />
-        </div>
+         
+          </>))}
+          
+        </div>:null}
         <div className="h-[600px] w-[76%] flex justify-between  qs:h-[300px] qs:w-[100%] qs:mt-11">
-          <img src={img} className="w-[400px] h-[440px] qs:h-60 bg-slate-100 qs:bg-white" />
+          <img src={selectImage||product?.images[0]} className="w-[400px] h-[440px] qs:h-60 bg-slate-100 qs:bg-white" />
           <div className=" h-[400px] w-[380px] qs:-ml-[340px]  qs:mt-96">
-            <h1 className="font_3">Havic HV G-92 Gamepad</h1>
-            <div className=" center w-[229px] h-5 mt-1">
-              <FaStar />
-              <FaStar />
-              <FaStar />
-              <FaStar />
+            <h1 className="font_3">{product?.title}</h1>
+            <div className=" flex items-center w-[340px] h-5 mt-1   ">
+            <ReactStars
+                    count={4}
+                    value={product?.rating}
+                    size={24}
+                    color2={"#ffd700"}
+                    edit={false}
+                  />
 
-              <span className="w-40 h-5 opacity-55 	">(150 Reviews)</span>
-              <span className="w-24 h-5 opacity-55	text-green-400 ">
-                In Stock
-              </span>
+              <span className="w-40 h-5 opacity-55 ml-4	">({product?.rating})</span>
+              <span className="w-28  h-5    -ml-10">
+                {product?.stock >=10 ? <p className="opacity-55	text-green-400 text-[17px]  ">In Stock</p> : <p className="  text-sm text-primary">Limited stock</p> }
+                
+              </span> 
             </div>
-            <p className="mt-1">$192.00</p>
+            <p className="mt-1">${product?.price}</p>
             <p className="w-[373px] mt-5">
-              PlayStation 5 Controller Skin High quality vinyl with air channel
-              adhesive for easy bubble free all & mess free removal Pressure
-              sensitive.
+             {product?.description}
             </p>
             <p className="w-[373px] boder-2"></p>
             <div className="flex gap-6 mt-6">
@@ -100,13 +111,14 @@ export default function Product_open() {
               <div className="border  p-3">
                 <h1 className="font_1">Free Delivery</h1>
                 <p className="text-xs	">
-                  Enter your postal code for Delivery Availability
-                </p>
+{product?.warrantyInformation
+}                </p>
               </div>
               <div className="border   p-3">
                 <h1 className="font_1">Return Delivery</h1>
                 <p className="text-xs	">
-                  Free 30 Days Delivery Returns. Details{" "}
+               {product?.returnPolicy
+               }
                 </p>
               </div>
             </div>
