@@ -12,6 +12,7 @@ export default function MoreProducts({
   rating,
   id
 }) {
+  // console.log(id,"ya hy");
   
   return (
     <>

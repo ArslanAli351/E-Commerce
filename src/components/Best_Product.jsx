@@ -11,7 +11,8 @@ export default function Best_Product() {
   const { products, loading, error } = useProduct("limit=4&&skip=45");
   return (
     <>
-      <div className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
+      {products?.map((item)=>
+      <Link to={`/product/${item.id}`} className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
         <div>
           <div className="w-[100px] h-10 center gap-4 ">
             <p className=" bg-primary w-5 h-10 "></p>
@@ -82,7 +83,7 @@ export default function Best_Product() {
         <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
           <img src={Benar} />
         </div>
-      </div>
+      </Link>)}
     </>
   );
 }

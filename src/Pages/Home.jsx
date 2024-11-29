@@ -27,7 +27,6 @@ export default function Home() {
         <All_product />
         <SellingProduct/>
         <Quantity />
-        <ProductDetail />
        
       </div>
     </>

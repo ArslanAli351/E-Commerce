@@ -52,7 +52,6 @@ export default function Slider() {
   const { products, loading, error } = useProduct("limit=10&&skip=87");
 
   const result = products?.filter((item) => item.rating >= 4);
-  console.log(result);
 
   return (
     <>
