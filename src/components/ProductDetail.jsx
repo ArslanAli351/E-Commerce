@@ -34,7 +34,7 @@ export default function ProductDetail() {
   }
   return (
     <>
-      <div className=" flex justify-between main ">
+      <div className=" flex justify-between mt-14">
         {isLoading ? "loading...." : null}
         {product?.images?.length > 1 ? (
           <div>
@@ -82,14 +82,14 @@ export default function ProductDetail() {
             <p className="mt-1">${product?.price * quantity || 0}</p>
             <p className="w-[373px] mt-5">{product?.description}</p>
             <p className="w-[373px] boder-2"></p>
-            <div className="flex gap-6 mt-6">
+            {/* <div className="flex gap-6 mt-6">
               <h1>Size:</h1>
               <p className="w-8 h-8 rounded	border center">XS</p>
               <p className="w-8 h-8 rounded	border center">S</p>
               <p className="w-8 h-8 rounded	border center">M</p>
               <p className="w-8 h-8 rounded	border center">L</p>
               <p className="w-8 h-8 rounded	border center">XL</p>
-            </div>
+            </div> */}
             <div className="flex justify-between mt-6">
               <div className="border w-40 h-11 flex justify-evenly">
                 <button
@@ -139,7 +139,7 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className=" mt-32">
+      <div className=" mt-24">
         <h1 className="text-primary text-4xl font_1">Reviews</h1>
         {product?.reviews?.map((review) => (
           <div className=" border-[5px]  border-white p-6 bg-[#f1f5f9]">

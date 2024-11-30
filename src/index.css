@@ -14,6 +14,7 @@
 .font_1 {
   font-family: "Poppins", sans-serif;
   font-weight: 400px;
+  position: relative;
 }
 .font_2 {
   font-family: "Roboto", sans-serif;

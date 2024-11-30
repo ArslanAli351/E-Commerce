@@ -10,6 +10,7 @@ import Quantity from "../components/Quantity";
 import Slider from "../components/Slider.jsx";
 import SellingProduct from "../components/Selling Products.jsx";
 import ProductDetail from "../components/ProductDetail.jsx";
+import Flash_Sales from "../components/hooks/Flash Sales.jsx";
 // import MoreProducts from "../components/MoreProducts.jsx";
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <HeroSection />
         <Slider />
         {/* <MoreProducts />  */}
-        <Product_Card />
+        {/* <Product_Card /> */}
+        <Flash_Sales />
         <Product_Category />
         <Best_Product />
         <Explore_Product />

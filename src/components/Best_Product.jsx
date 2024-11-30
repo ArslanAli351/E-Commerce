@@ -11,7 +11,33 @@ export default function Best_Product() {
   const { products, loading, error } = useProduct("limit=4&&skip=45");
   return (
     <>
-      {products?.map((item)=>
+        <div className="mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
+          <div className="w-[100px] h-10 center gap-4 ">
+            <p className=" bg-primary w-5 h-10 "></p>
+            <span className="text-sm text-primary">This Month</span>
+          </div>
+          <h1 className=" h-12 font_3 text-[30px]  font_3">
+            Best Selling Products
+          </h1>
+          </div>
+          <div className=" gap-9 flex flex-wrap justify-evenly items-center mt-8  w-[90%] ml-[70px]  qs:ml-[19px] ">
+          {loading ? "loading...." : null}
+          {error}
+      {products?.map((item) => (
+        <>
+            <Product_Card
+              key={item.id}
+              image={item.thumbnail}
+              name={item.title}
+              price={item.price}
+              discount={item.discountPercentage}
+              rating={item.rating}
+              id={item.id}
+            />
+        </>
+      ))}
+
+      {/* {products?.map((item)=>
       <Link to={`/product/${item.id}`} className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
         <div>
           <div className="w-[100px] h-10 center gap-4 ">
@@ -83,7 +109,8 @@ export default function Best_Product() {
         <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-5 qs:mt-8 qs:h-28">
           <img src={Benar} />
         </div>
-      </Link>)}
+      </Link>)} */}
+      </div>
     </>
   );
 }
