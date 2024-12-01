@@ -30,7 +30,7 @@ export default function Navbare() {
               />
               <CiSearch className="text-3xl" />
             </div>
-            <div className=" h-6 bg-white w-96 qs:w-[110%] qs:h-12 qs:items-center  qs:-ml-4 qs:-mt-20  qs:flex ">
+            <div className=" h-6 bg-white w-96 ml-[570px] -mt-7 qs:w-[110%] qs:h-12 qs:items-center  qs:-ml-4 qs:-mt-20  qs:flex ">
               <ul className="hidden md:flex items-center	 gap-5 ">
                 {links.map((items, i) => (
                   <li
