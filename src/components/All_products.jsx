@@ -25,7 +25,7 @@ export default function All_product() {
           <h1 className="w-[211px h-12 font_3 text-[30px] font_3">
             Best Selling Products
           </h1>
-          <div className="center font_1 ml-[860px]  -mt-[150px] rounded absolute hover:bg-primary  hover:text-white  h-[56px]">
+          <div className="center font_1 ml-[860px]  rounded absolute hover:bg-primary  hover:text-white  h-[56px]">
             <Link
               to={"/Product-API"}
               className=" center font_1 text-xs border-2	 rounded w-[134px] h-[56px] qs:hidden "
@@ -53,7 +53,7 @@ export default function All_product() {
         
         <Link
           to={"/Product-API"}
-          className=" center font_1 lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white"
+          className=" center font_1 lg:hidden ml-[100px] md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white"
         >
           Move All To Bag
         </Link>

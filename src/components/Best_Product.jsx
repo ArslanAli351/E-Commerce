@@ -20,7 +20,7 @@ export default function Best_Product() {
             Best Selling Products
           </h1>
           </div>
-          <div className=" gap-9 flex flex-wrap justify-evenly items-center mt-8  w-[90%] ml-[70px]  qs:ml-[19px] ">
+          <div className=" gap-9 flex flex-wrap justify-evenly items-center mt-8  w-[90%] ml-[70px]  qs:ml-[19px] qs:-mt-[490px] ">
           {loading ? "loading...." : null}
           {error}
       {products?.map((item) => (

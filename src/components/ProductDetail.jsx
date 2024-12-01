@@ -34,36 +34,40 @@ export default function ProductDetail() {
   }
   return (
     <>
-      <div className=" flex justify-between mt-14">
+      <div className=" flex justify-between mt-14 ">
         {isLoading ? "loading...." : null}
         {product?.images?.length > 1 ? (
-          <div>
+          <div className=" qs:-mt-7">
             {product?.images.map((image, i) => (
               <>
                 <img
                   key={i}
                   src={image}
-                  className="w-[150px] h-[138px] mt-[23px] rounded	qs:hidden"
+                  className="w-[150px] h-[138px] mt-[23px] rounded	border-4"
                   onMouseOver={() => setSelectImage(image)}
+                  alt="image"
                 />
               </>
             ))}
           </div>
         ) : null}
-        <div className="h-[600px] w-[76%] flex justify-between  qs:h-[300px] qs:w-[100%] qs:mt-11">
-          <img
-            src={selectImage || product?.images[0]}
-            className="w-[400px] h-[440px] qs:h-60 bg-slate-100 qs:bg-white"
-          />
-          <div className=" h-[400px] w-[380px] qs:-ml-[340px]  qs:mt-96">
-            <h1 className="font_3">{product?.title}</h1>
-            <div className=" flex items-center w-[340px] h-5 mt-1   ">
+        <div className="h-[600px] w-[76%] flex justify-between  qs:justify-center qs:h-[300px]  qs:w-[100%] qs:mt-11">
+          <div className="qs:h-[300px] qs:w-[100%] qs:ml-3">
+            <img
+              src={selectImage || product?.images[0]}
+              className="w-[400px] h-[440px] qs:h-[300px] qs:w-[270px]  bg-slate-100 qs:center qs:bg-white "
+            />
+          </div>
+          <div className=" h-[400px] w-[380px] qs:-ml-[320px]  qs:mt-[440px]   ">
+            <h1 className="font_3 qs:text-2xl">{product?.title}</h1>
+            <div className=" flex items-center w-[340px] h-5 mt-1  ">
               <ReactStars
                 count={4}
                 value={product?.rating}
                 size={24}
                 color2={"#ffd700"}
                 edit={false}
+                className=" qs:text-xl"
               />
 
               <span className="w-40 h-5 opacity-55 ml-4	">
@@ -139,11 +143,11 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className=" mt-24">
+      <div className=" mt-24  qs:mt-[540px] ">
         <h1 className="text-primary text-4xl font_1">Reviews</h1>
         {product?.reviews?.map((review) => (
           <div className=" border-[5px]  border-white p-6 bg-[#f1f5f9]">
-            <h2 > {review.reviewerName}</h2>
+            <h2> {review.reviewerName}</h2>
             {/* <p>{format(review.date,'MM / EEE-YYY')}</p> */}
             <p>{formatDistanceToNow(review.date, { addSuffix: true })}</p>
 

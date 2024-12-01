@@ -9,12 +9,12 @@ export default function SellingProduct() {
 
   return (
     <>
-      <Link
+      {/* <Link
         to={"/Product-API"}
         className=" center font_1 lg:hidden md:hidden	sm:hidden text-xs border-2	mt-8 rounded w-[134px] h-[56px]  bg-primary text-white"
       >
         Move All To Bag
-      </Link>
+      </Link> */}
 
       <div className="mt-[140px]   w-[90%] ml-[70px] qs:ml-4">
         <div>
@@ -34,7 +34,7 @@ export default function SellingProduct() {
             </Link>
           </div>
         </div>
-        <div className=" flex justify-evenly flex-wrap gap-10 items-center  ">
+        <div className=" flex justify-evenly flex-wrap gap-10 items-center qs:mt-16 ">
         {loading ? "loading...." : null}
         {error}
         {products?.map((item) => (

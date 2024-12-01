@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { useState } from "react";
-import { handleClick } from "../Pages/Login";
 export default function Navbare() {
   const links = [
     { title: "Home", link: "/" },
@@ -18,9 +17,9 @@ export default function Navbare() {
   return (
     <>
       <div className="container-x " id="top">
-        <div className=" border  center border-t-0	border-l-0	 border-r-0	">
-          <div className=" h-[38px]	 mt-[88px]  ">
-            <h1 className="w-[118px] h-6 font_2 qs:ml-[310px] qs:-mt-6 qs:absolute">
+        <div className=" border-2  center border-t-0	border-l-0	 border-r-0	">
+          <div className=" h-[38px]	 mt-[88px]   w-[90%]">
+            <h1 className="w-[118px] h-6 font_2 qs:absolute qs:-mt-[75px]">
               Exclusive
             </h1>
             <div className="w-60 px-2 h-[36px] -mt-7 rounded center bg-[#F5F5F5]  ml-64  qs:hidden">
@@ -31,9 +30,8 @@ export default function Navbare() {
               />
               <CiSearch className="text-3xl" />
             </div>
-
-            <div className=" h-6 bg-white w-96 -mt-7 ml-[580px] qs:ml-[570px] ">
-              <ul className="hidden md:flex items-center	 gap-5">
+            <div className=" h-6 bg-white w-96 qs:w-[110%] qs:h-12 qs:items-center  qs:-ml-4 qs:-mt-20  qs:flex ">
+              <ul className="hidden md:flex items-center	 gap-5 ">
                 {links.map((items, i) => (
                   <li
                     className="hover:underline  hover:text-primary font_1 "
@@ -56,8 +54,8 @@ export default function Navbare() {
                     <Link
                       to={"/login"}
                       className="hover:underline  hover:text-primary font_1 "
-      // onClick={handleClick}    
-       >
+                      // onClick={handleClick}
+                    >
                       Login
                     </Link>
                     {/* <span className="bg-primary text-white rounded-full w-8 h-8 center">
@@ -67,7 +65,7 @@ export default function Navbare() {
                 )}
               </ul>
               <button
-                className="border-2 text-4xl md:hidden qs:-ml-3"
+                className="border-2 text-4xl md:hidden   qs:absolute qs:ml-[310px]"
                 onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
               >
                 {isHamburgerOpen ? (
@@ -77,7 +75,7 @@ export default function Navbare() {
                 )}
               </button>
               {isHamburgerOpen && (
-                <div className="border-2 border-red-900 -ml-[190px] h-56 rounded w-[85%] ">
+                <div className=" -ml-[190px] h-56 rounded w-[85%] qs:ml-24 qs:mt-64">
                   <ul className="border-2 border-green-900 h-[220px] flex flex-col gap-4 pl-4 rounded  w-[60%] bg-primary text-white absolute ">
                     {links.map((items, i) => (
                       <li className="hover:underline   font_1 " key={i}>
@@ -96,12 +94,12 @@ export default function Navbare() {
                 </div>
               )}
               {!isLoggedIn ? (
-                <span className="bg-primary text-white rounded-full w-8 h-8 center ml-[370px] -mt-7 qs:ml-11 qs:-mt-10 ">
+                <span className="bg-primary text-white rounded-full w-8 h-8 center ml-[370px] -mt-7   qs:ml-[270px] qs:mt-0 qs:absolute ">
                   <FaRegUser className=" text-[15px]  " />
                 </span>
               ) : null}
 
-              <div className="gap-4 center w-32 h-8 ml-[280px] -mt-7  text-2xl	">
+              <div className="gap-4 center w-32 h-8 ml-[280px] -mt-7  text-2xl	qs:ml-[180px] qs:absolute qs:-mt-0">
                 {isLoggedIn ? (
                   <>
                     <IoMdHeartEmpty />
