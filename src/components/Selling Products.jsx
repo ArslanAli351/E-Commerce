@@ -39,6 +39,7 @@ export default function SellingProduct() {
         {error}
         {products?.map((item) => (
         <>
+        
             <Product_Card
               key={item.id}
               image={item.thumbnail}

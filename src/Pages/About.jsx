@@ -1,11 +1,45 @@
-import img1 from "../assets/Untitled-4.png";
+import img1 from "../assets/images.jpeg";
+import img2 from "../assets/Frame 560.png";
+
 import Footer from "../components/Footer";
 
 export default function About() {
   return (
     <>
-      <div className="">
-        <div className="h-16 border-2 relative group  ">
+      <div className="">   
+             <h1 className="text-4xl font-bold hover:text-primary ml-32 mt-4">About us</h1>
+
+        <div className=" flex justify-evenly p-12 items-center qs:flex-col"> 
+
+        <p className="w-[40%] qs:w-full">
+          At E-Commerce Website, we believe in offering more than just products
+          – we deliver quality, convenience, and exceptional customer service.
+          Whether you're looking for [specific product types, e.g., stylish
+          clothing, cutting-edge electronics, eco-friendly home goods], we are
+          here to provide you with the best shopping experience possible.
+        <p className="mt-9 qs:hidden ">Our mission is simple: to make shopping online a breeze while offering
+          only the highest quality products at competitive prices. We’re
+          committed to transparency, reliability, and ensuring that every.</p> 
+          
+          
+          </p>
+       
+        
+        <img className="w-[40%] h-56 rounded qs:w-full qs:mt-24" src={img1} alt="image" /></div>
+        <div  className=" flex justify-evenly p-12 items-center qs:flex-col ">
+        <img className="w-[40%] h-56 rounded qs:w-full " src={img2} alt="image" />
+
+        <p className="w-[40%] qs:w-full">
+          At E-Commerce Website, we believe in offering more than just products
+          – we deliver quality, convenience, and exceptional customer service.
+          Whether you're looking for [specific product types, e.g., stylish
+          clothing, cutting-edge electronics, eco-friendly home goods], we are
+          here to provide you with the best shopping experience possible.
+        </p>
+        
+          
+        </div>
+        {/* <div className="h-16 border-2 relative group  ">
           <h1 className="absolute group-hover:text-primary transition duration-300 w-full center mt-32 font_3 text-4xl">
             {" "}
             E-Commerce Website
@@ -18,20 +52,10 @@ export default function About() {
           <span className="font-bold">Welcome to E-Commerce Website –</span>{" "}
           Your Trusted Online Marketplace for [Product Category]
         </p>
-        <p>
-          At E-Commerce Website, we believe in offering more than just products
-          – we deliver quality, convenience, and exceptional customer service.
-          Whether you're looking for [specific product types, e.g., stylish
-          clothing, cutting-edge electronics, eco-friendly home goods], we are
-          here to provide you with the best shopping experience possible.
-        </p>
+       
         <h1 className="font-bold">Our Mission</h1>
         <p>
-          Our mission is simple: to make shopping online a breeze while offering
-          only the highest quality products at competitive prices. We’re
-          committed to transparency, reliability, and ensuring that every order
-          is handled with care – from the moment you click "buy" to when your
-          package arrives at your door.
+          
         </p>
 
         <p>
@@ -88,7 +112,7 @@ export default function About() {
           satisfied customers who trust us for their shopping needs. Follow us
           on [Social Media Links] to stay up-to-date with new arrivals,
           exclusive offers, and behind-the-scenes looks at how we operate.
-        </p>
+        </p> */}
 
         <Footer />
       </div>

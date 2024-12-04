@@ -54,7 +54,7 @@ th {
 
 @media screen and (max-width: 530px) {
   .swiper-slide {
-    height: 170px;
+    height: 320px;
     border-radius: 50px;
   }
   .container {

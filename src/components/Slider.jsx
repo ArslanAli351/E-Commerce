@@ -9,9 +9,9 @@ import {
   Navigation,
   Autoplay,
 } from "swiper/modules";
-import ReactStars from "react-stars";
 import useProduct from "./hooks/useProducts";
 import Product_Card from "./Product_Card";
+import SetSlider from "./SetSlider";
 
 export default function Slider() {
   const { products, loading, error } = useProduct("limit=7&&skip=87");
@@ -20,7 +20,7 @@ export default function Slider() {
 
   return (
     <>
-      <div className="container bg-white mt-[80px]   w-[90%] ml-[70px] ">
+      <div className="container bg-white mt-[80px] h-80  w-[90%] ml-[70px] ">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -36,21 +36,24 @@ export default function Slider() {
           {error}
           {result?.map((item) => (
             <SwiperSlide>
-              <div className="flex justify-center	gap-10  ">
-                <div className="group border-2 flex   gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[350px] ">
-                  <Product_Card
-                    key={item.id}
-                    image={item.thumbnail}
-                    name={item.title}
-                    price={item.price}
-                    discount={item.discountPercentage}
-                    rating={item.rating}
-                    id={item.id}
-                  />
-                </div>
+              <div className="group border-2 flex   gap-4 relative bg-[#F5F5F5] w-[270px] h-[350px] ml-16 qs:m-0">
+                <Product_Card
+                  key={item.id}
+                  image={item.thumbnail}
+                  name={item.title}
+                  price={item.price}
+                  discount={item.discountPercentage}
+                  rating={item.rating}
+                  id={item.id}
+                />
               </div>
             </SwiperSlide>
           ))}
+          <SwiperSlide>
+            <div className="flex justify-center	gap-10  ">
+              <SetSlider />
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </>

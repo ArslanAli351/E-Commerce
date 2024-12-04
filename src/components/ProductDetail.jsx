@@ -36,8 +36,10 @@ export default function ProductDetail() {
     <>
       <div className=" flex justify-between mt-14 ">
         {isLoading ? "loading...." : null}
-        {product?.images?.length > 1 ? (
+        {product?.images?.length > 1 && product?.images?.length <= 3 ?(
+          
           <div className=" qs:-mt-7">
+           
             {product?.images.map((image, i) => (
               <>
                 <img
@@ -47,6 +49,8 @@ export default function ProductDetail() {
                   onMouseOver={() => setSelectImage(image)}
                   alt="image"
                 />
+                          <SwiperSlide>{Product()}</SwiperSlide>
+
               </>
             ))}
           </div>

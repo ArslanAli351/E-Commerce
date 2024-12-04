@@ -27,12 +27,12 @@ export default function Product_Card({
   return (
     <>
       <Link to={`/product/${id}`}>
-        <div className="group border-2 flex   gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[380px] ">
+        <div className="group border-2 flex   gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[350px] ">
           <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
             {discount}%
           </div>
 
-          <div className="mt-9">
+          <div >
             <img
               src={image}
               alt="product img"

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Product_Card from "../components/Product_Card";
 import useProduct from "../components/hooks/useProducts";
+import Not_Found from "../components/Not_Found";
 export default function Product_API() {
   const { products, loading, error } = useProduct();
 
@@ -57,6 +58,7 @@ export default function Product_API() {
 
       {loading ? "Loading...." : null}
       {error}
+      {searchResult?.length === 0 ? <Not_Found /> : null}
       <div className="aa mt-[80px]   w-[90%] ml-[70px]  qs:ml-[19px] flex flex-wrap justify-evenly gap-10">
         {searchResult?.map((item) => (
           <MoreProducts
