@@ -1,5 +1,5 @@
 import img1 from "../assets/images.jpeg";
-import img2 from "../assets/Frame 560.png";
+import img2 from "../assets/Logo.jpg";
 
 import Footer from "../components/Footer";
 
@@ -27,7 +27,7 @@ export default function About() {
         
         <img className="w-[40%] h-56 rounded qs:w-full qs:mt-24" src={img1} alt="image" /></div>
         <div  className=" flex justify-evenly p-12 items-center qs:flex-col ">
-        <img className="w-[40%] h-56 rounded qs:w-full " src={img2} alt="image" />
+        <img className="w-[40%] h-60 rounded qs:w-full " src={img2} alt="image" />
 
         <p className="w-[40%] qs:w-full">
           At E-Commerce Website, we believe in offering more than just products

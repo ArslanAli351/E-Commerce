@@ -10,6 +10,8 @@
 * {
   --primary: #db4444;
   scroll-behavior: smooth;
+  --dark:  #0f172a
+
 }
 .font_1 {
   font-family: "Poppins", sans-serif;

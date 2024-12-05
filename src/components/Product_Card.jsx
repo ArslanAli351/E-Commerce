@@ -32,7 +32,7 @@ export default function Product_Card({
             {discount}%
           </div>
 
-          <div >
+          <div>
             <img
               src={image}
               alt="product img"

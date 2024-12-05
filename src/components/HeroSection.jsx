@@ -1,10 +1,13 @@
 import { FaGreaterThan } from "react-icons/fa6";
 import Frame from "../assets/Frame 560.png";
+import { useSelector } from "react-redux";
 export default function HeroSection() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
-      <div>
-        <div className=" mt-4 border-t-0	border-l-0	 border-b-0	ml-20 w-[217px] h-[344px] font_1 border-2 flex justify-evenly flex-col qs:mt-[380px] qs:w-[360px] qs:ml-0 qs:border-2 	qs:flex-row qs:absolute qs:h-32 qs:flex-wrap  qs:justify-between">
+      <div className={`${darkMode?"bg-dark text-white":""} `}>
+        <div className={` mt-4 border-t-0	border-l-0	border-b-0	ml-20 w-[217px] h-[344px] font_1 border-2 flex justify-evenly flex-col qs:mt-[380px] qs:w-[360px] qs:ml-0 qs:border-2 	qs:flex-row qs:absolute qs:h-32 qs:flex-wrap  qs:justify-between`}>
           <p className=" center hover:text-primary ">
             Woman’s Fashion <FaGreaterThan className="ml-14  qs:hidden" />
           </p>

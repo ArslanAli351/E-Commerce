@@ -12,9 +12,8 @@ import SignUp from "./Pages/SignUp.jsx";
 import Not_Found from "./components/Not_Found.jsx";
 import Product_API from "./Pages/Product_API.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
-// import Product_open from "./components/Product_open.jsx";
 function App() {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return (
     <>
       <Banner />

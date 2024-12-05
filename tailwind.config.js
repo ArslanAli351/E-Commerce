@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         primary: "var(--primary)",
+        dark:"var(--dark)",
       },
       screens: {
         qs: { max: "530px" },

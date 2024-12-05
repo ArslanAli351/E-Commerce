@@ -14,7 +14,7 @@ import Product_Card from "./Product_Card";
 import SetSlider from "./SetSlider";
 
 export default function Slider() {
-  const { products, loading, error } = useProduct("limit=7&&skip=87");
+  const { products, loading, error } = useProduct("limit=10&&skip=94");
 
   const result = products?.filter((item) => item.rating >= 4);
 
@@ -49,6 +49,7 @@ export default function Slider() {
               </div>
             </SwiperSlide>
           ))}
+         
           <SwiperSlide>
             <div className="flex justify-center	gap-10  ">
               <SetSlider />
