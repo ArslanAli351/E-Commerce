@@ -7,7 +7,10 @@ import img4 from "../assets/ps5.png";
 import img5 from "../assets/baji.png";
 import img6 from "../assets/speaker.png";
 import img7 from "../assets/perfume.png";
+import { useSelector } from "react-redux";
 export default function Featured_Product() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
       <div className="mt-[80px]   w-[90%] ml-[70px] qs:hidden ">
@@ -15,7 +18,7 @@ export default function Featured_Product() {
           <p className="border bg-primary w-5 h-10"></p>
           <span className="text-sm text-primary">Featured</span>
         </div>
-        <h1 className="w-[211px h-12 font_3 text-[30px]">New Arrival</h1>
+        <h1 className={`w-[211px h-12 font_3 text-[30px] ${darkMode?"text-white":""}`}>New Arrival</h1>
         {/* <img className="h-[500px]" src={Baner} /> */}
 
         <div className="main grid grid-cols-4 gap-8 grid-rows-2">
@@ -119,19 +122,19 @@ export default function Featured_Product() {
         <div className="w-[70%] text-xs gap-20	font_1  flex  justify-around mt-[0px] ml-[150px]">
           <div>
             {" "}
-            <h3 className="font-semibold	">FREE AND FAST DELIVERY</h3>
-            <p className="text-[10px]">
+            <h3 className={`font-semibold	${darkMode?"text-white":""}`}>FREE AND FAST DELIVERY</h3>
+            <p className={`text-[10px] 	${darkMode?"text-white":""}`}>
               Free delivery for all orders over $140
             </p>{" "}
           </div>
           <div>
-            <h3 className="font-semibold	">MONEY BACK GUARANTEE</h3>
-            <p className="text-[10px]">We reurn money within 30 days</p>
+            <h3 className={`font-semibold		${darkMode?"text-white":""}`}>MONEY BACK GUARANTEE</h3>
+            <p className={`text-[10px] 	${darkMode?"text-white":""}`}>We reurn money within 30 days</p>
           </div>
           <div>
             {" "}
-            <h3 className="font-semibold	">24/7 CUSTOMER SERVICE</h3>
-            <p className="text-[10px]">Friendly 24/7 customer support</p>
+            <h3 className={`font-semibold		${darkMode?"text-white":""}`}>24/7 CUSTOMER SERVICE</h3>
+            <p className={`text-[10px] 	${darkMode?"text-white":""}`}>Friendly 24/7 customer support</p>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import "sweetalert2/src/sweetalert2.scss";
 // function handleClick() {
@@ -60,8 +61,9 @@ export default function Login() {
 console.log(email,password);
 
   }
-  
-  return<> <h1 className="center font_2 mt-5 absolute w-full ">Login page</h1>
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
+  return<> <h1 className={`center font_2 mt-5 absolute w-full ${darkMode?"text-white":""}`}>Login page</h1>
   <div class=" center min-h-[100vh] ">
     <div class="display h-[600px] w-[360px] mt-16 relative  ">
       <div class=" relative h-full z-10">
@@ -92,7 +94,7 @@ console.log(email,password);
         <span class="rotate-45 absolute h-[400px] w-[200px] mt-[420px] mr-[50px] bg-[#b97b7b] rounded-[60px]  __background__shape4"></span>
         <span class="rotate-45 absolute  h-[540px] w-[190px] -mt-6 mr-0 rounded-[32px] shape3"></span>
         <span class="rotate-45 absolute  h-[220] w-[220px] -mt[172px] mr-0 rounded-[32px] bg-[#ac6363] screen__background__shape2"></span>
-        <span class="rotate-45 absolute h-[520px] w-[520px] -mt-[50px] bg-white shape1"></span>
+        <span class={`rotate-45 absolute h-[520px] w-[520px] -mt-[50px] bg-white shape1 `}></span>
       </div>
     </div>
   </div>      

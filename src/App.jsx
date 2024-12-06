@@ -12,10 +12,14 @@ import SignUp from "./Pages/SignUp.jsx";
 import Not_Found from "./components/Not_Found.jsx";
 import Product_API from "./Pages/Product_API.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
+import { useSelector } from "react-redux";
 function App() {
   const isLoggedIn = true;
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
-    <>
+    < >
+    <div className={` ${darkMode?"bg-dark":""}`}>
       <Banner />
       <Navbare />
       <Routes>
@@ -57,6 +61,7 @@ function App() {
         )}
       
       </Routes>
+      </div>
     </>
   );
 }

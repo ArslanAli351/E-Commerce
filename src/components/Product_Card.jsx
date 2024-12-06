@@ -7,6 +7,7 @@ import Frameimg from "../assets/Frame 570.png";
 import ReactStars from "react-stars";
 import useProduct from "./hooks/useProducts";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Product_Card({
   image,
@@ -16,18 +17,12 @@ export default function Product_Card({
   rating,
   id,
 }) {
-  // const { products, loading, error } = useProduct("limit=4&&skip=83");
-  // console.log(products.id);
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
 
-  // console.log(name);
-  {
-    /* {loading ? "loading...." : null}
-   {error} */
-  }
   return (
     <>
       <Link to={`/product/${id}`}>
-        <div className="group border-2 flex   gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[350px] ">
+        <div className={`group border-2 flex ${darkMode?"bg-dark":""}  gap-4 flex-col relative bg-[#F5F5F5] w-[270px] h-[350px] `}>
           <div className="discount absolute top-3 left-3 bg-primary w-14 h-6 rounded flex items-center text-xs justify-center text-white ">
             {discount}%
           </div>
@@ -40,12 +35,12 @@ export default function Product_Card({
             />
           </div>
 
-          <h3 className="font-medium group-hover:text-primary transition-all duration-300">
+          <h3 className={` font-medium group-hover:text-primary ${darkMode?"text-white":""} transition-all duration-300`}>
             {name}{" "}
           </h3>
 
           <p>
-            <span className="text-primary">${price}</span>{" "}
+            <span className={`text-primary ${darkMode?"text-white":""} `}>${price}</span>{" "}
           </p>
 
           <p className="flex items-center gap-3">
@@ -57,7 +52,7 @@ export default function Product_Card({
               color2={"#ffd700"}
               edit={false}
             />
-            <span>({rating})</span>
+            <span className={`${darkMode?"text-white":""}`}>({rating})</span>
           </p>
         </div>
       </Link>

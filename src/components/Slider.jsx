@@ -20,7 +20,7 @@ export default function Slider() {
 
   return (
     <>
-      <div className="container bg-white mt-[80px] h-80  w-[90%] ml-[70px] ">
+      <div className="container mt-[80px] h-80  w-[90%] ml-[70px] ">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}

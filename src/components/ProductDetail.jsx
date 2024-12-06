@@ -16,6 +16,7 @@ import axios from "axios";
 import ReactStars from "react-stars";
 import Not_Found from "./Not_Found";
 import { SwiperSlide } from "swiper/react";
+import { useSelector } from "react-redux";
 export default function ProductDetail() {
   const params = useParams();
   const { data, error, isLoading } = useSWR(
@@ -33,9 +34,11 @@ export default function ProductDetail() {
   if (error) {
     return <Not_Found />;
   }
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
-      <div className=" flex justify-between mt-14 ">
+      <div className={` flex justify-between mt-14 ${darkMode?"text-white":""}`}>
         {isLoading ? "loading...." : null}
         {product?.images?.length > 1 && product?.images?.length <= 3 ? (
           <div className=" qs:-mt-7">
@@ -144,10 +147,10 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className=" mt-24  qs:mt-[540px] ">
+      <div className={` mt-24  qs:mt-[540px] ${darkMode?"text-white":""}`} >
         <h1 className="text-primary text-4xl font_1">Reviews</h1>
         {product?.reviews?.map((review) => (
-          <div className=" border-[5px]  border-white p-6 bg-[#f1f5f9]">
+          <div className={` border-[5px]  border-white p-6 bg-[#f1f5f9] ${darkMode?"bg-dark":""}`}>
             <h2> {review.reviewerName}</h2>
             {/* <p>{format(review.date,'MM / EEE-YYY')}</p> */}
             <p>{formatDistanceToNow(review.date, { addSuffix: true })}</p>

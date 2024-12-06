@@ -1,12 +1,15 @@
+import { useSelector } from "react-redux";
 import img1 from "../assets/images.jpeg";
 import img2 from "../assets/Logo.jpg";
 
 import Footer from "../components/Footer";
 
 export default function About() {
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
-      <div className="">   
+      <div className={`${darkMode?"text-white":""}`}>   
              <h1 className="text-4xl font-bold hover:text-primary ml-32 mt-4">About us</h1>
 
         <div className=" flex justify-evenly p-12 items-center qs:flex-col"> 

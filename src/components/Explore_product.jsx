@@ -5,9 +5,11 @@ import Product_Card from "./Product_Card";
 import { Link } from "react-router-dom";
 import useProduct from "./hooks/useProducts";
 import ReactStars from "react-stars";
+import { useSelector } from "react-redux";
 
 export default function Explore_Product() {
   const { products, loading, error } = useProduct("limit=4&&skip=91");
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
 
   return (
     <>
@@ -17,7 +19,7 @@ export default function Explore_Product() {
             <p className="border bg-primary w-5 h-10 "></p>
             <span className="text-sm text-primary ">Our Products</span>
           </div>
-          <h1 className="w-[211px h-12 font_3 text-[30px]">
+          <h1 className={`w-[211px h-12 font_3 text-[30px] ${darkMode?"text-white":""}`}>
             Explore Our Products
           </h1>
           <div className=" flex justify-end  ml-[950px] absolute	-mt-20 gap-2	qs:hidden	">

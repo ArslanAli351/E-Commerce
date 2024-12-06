@@ -6,9 +6,12 @@ import Product_Card from "./Product_Card";
 import { Link } from "react-router-dom";
 import useProduct from "./hooks/useProducts";
 import ReactStars from "react-stars";
+import { useSelector } from "react-redux";
 
 export default function Best_Product() {
   const { products, loading, error } = useProduct("limit=4&&skip=45");
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+
   return (
     <>
         <div className="mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
@@ -16,7 +19,7 @@ export default function Best_Product() {
             <p className=" bg-primary w-5 h-10 "></p>
             <span className="text-sm text-primary">This Month</span>
           </div>
-          <h1 className=" h-12 font_3 text-[30px]  font_3">
+          <h1 className={` h-12 font_3 text-[30px]  font_3  ${darkMode?"text-white":""}`}>
             Best Selling Products
           </h1>
           </div>
@@ -36,7 +39,6 @@ export default function Best_Product() {
             />
         </>
       ))}
-
       {/* {products?.map((item)=>
       <Link to={`/product/${item.id}`} className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
         <div>
