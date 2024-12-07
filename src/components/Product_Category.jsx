@@ -34,9 +34,7 @@ export default function Product_Category() {
             <div className="flex gap-4 ">
               <p className=" bg-primary w-5 h-10 "></p>
               <span
-                className={`text-sm text-primary mt-3 font_3 ${
-                  darkMode ? "text-white" : ""
-                }`}
+                className={`text-sm text-primary mt-3 font_3`}
               >
                 Categories
               </span>

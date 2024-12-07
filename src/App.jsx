@@ -13,6 +13,7 @@ import Not_Found from "./components/Not_Found.jsx";
 import Product_API from "./Pages/Product_API.jsx";
 import ProductDetail from "./components/ProductDetail.jsx";
 import { useSelector } from "react-redux";
+import AddNewProduct from "./Pages/AddNewProduct.jsx";
 function App() {
   const isLoggedIn = true;
   const darkMode = useSelector((state) => state.darkMode.darkMode);
@@ -27,6 +28,8 @@ function App() {
         <Route path="/not-found" element={<Not_Found />} />
         <Route path="/Product-API" element={<Product_API/>} />
         <Route path="/Product/:id" element={<ProductDetail/>} />
+        <Route path="/Product/add" element={<AddNewProduct/>} />
+
 
 
         {isLoggedIn ? (

@@ -1,11 +1,5 @@
-import img from "../assets/game.png";
-import Keyboardimg from "../assets/Keyboard img.png";
-import Ledimg from "../assets/Led img.png";
-import Benar from "../assets/baner.png";
 import Product_Card from "./Product_Card";
-import { Link } from "react-router-dom";
 import useProduct from "./hooks/useProducts";
-import ReactStars from "react-stars";
 import { useSelector } from "react-redux";
 
 export default function Best_Product() {
@@ -14,20 +8,24 @@ export default function Best_Product() {
 
   return (
     <>
-        <div className="mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
-          <div className="w-[100px] h-10 center gap-4 ">
-            <p className=" bg-primary w-5 h-10 "></p>
-            <span className="text-sm text-primary">This Month</span>
-          </div>
-          <h1 className={` h-12 font_3 text-[30px]  font_3  ${darkMode?"text-white":""}`}>
-            Best Selling Products
-          </h1>
-          </div>
-          <div className=" gap-9 flex flex-wrap justify-evenly items-center mt-8  w-[90%] ml-[70px]  qs:ml-[19px] qs:-mt-[490px] ">
-          {loading ? "loading...." : null}
-          {error}
-      {products?.map((item) => (
-        <>
+      <div className="mt-[80px]   w-[90%] ml-[70px]  qs:h-[600px] qs:ml-5">
+        <div className="w-[100px] h-10 center gap-4 ">
+          <p className=" bg-primary w-5 h-10 "></p>
+          <span className="text-sm text-primary">This Month</span>
+        </div>
+        <h1
+          className={` h-12 font_3 text-[30px]  font_3  ${
+            darkMode ? "text-white" : ""
+          }`}
+        >
+          Best Selling Products
+        </h1>
+      </div>
+      <div className=" gap-9 flex flex-wrap justify-evenly items-center mt-8  w-[90%] ml-[70px]  qs:ml-[19px] qs:-mt-[490px] ">
+        {loading ? "loading...." : null}
+        {error}
+        {products?.map((item) => (
+          <>
             <Product_Card
               key={item.id}
               image={item.thumbnail}
@@ -37,9 +35,9 @@ export default function Best_Product() {
               rating={item.rating}
               id={item.id}
             />
-        </>
-      ))}
-      {/* {products?.map((item)=>
+          </>
+        ))}
+        {/* {products?.map((item)=>
       <Link to={`/product/${item.id}`} className="mt-[140px]   w-[90%] ml-[70px]  qs:ml-5 qs:border-2 qs:relative">
         <div>
           <div className="w-[100px] h-10 center gap-4 ">
