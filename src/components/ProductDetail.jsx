@@ -2,11 +2,7 @@
 // ========== Use date-fns WEBSITE ==========
 
 import { formatDistanceToNow, format } from "date-fns";
-import img from "../assets/game.png";
-import Keyboardimg from "../assets/Keyboard img.png";
-import Ledimg from "../assets/Led img.png";
-import Frameimg from "../assets/Frame 570.png";
-import { FaStar } from "react-icons/fa";
+
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useEffect, useState } from "react";
 import Footer from "./Footer";
@@ -15,7 +11,6 @@ import useSWR from "swr";
 import axios from "axios";
 import ReactStars from "react-stars";
 import Not_Found from "./Not_Found";
-import { SwiperSlide } from "swiper/react";
 import { useSelector } from "react-redux";
 export default function ProductDetail() {
   const params = useParams();
@@ -38,7 +33,11 @@ export default function ProductDetail() {
 
   return (
     <>
-      <div className={` flex justify-between mt-14 ${darkMode?"text-white":""}`}>
+      <div
+        className={` flex justify-between mt-14 ${
+          darkMode ? "text-white" : ""
+        }`}
+      >
         {isLoading ? "loading...." : null}
         {product?.images?.length > 1 && product?.images?.length <= 3 ? (
           <div className=" qs:-mt-7">
@@ -56,10 +55,10 @@ export default function ProductDetail() {
           </div>
         ) : null}
         <div className="h-[600px] w-[76%] flex justify-between  qs:justify-center qs:h-[300px]  qs:w-[100%] qs:mt-11">
-          <div className="qs:h-[300px] qs:w-[100%] qs:ml-3">
+          <div className="qs:h-[300px] qs:w-[100%] center  qs:ml-14 qs:bg-[#f7f8fe] qs:shadow-2xl qs:border-4 border-[#d3d2d2]">
             <img
               src={selectImage || product?.images[0]}
-              className="w-[400px] h-[440px] qs:h-[300px] qs:w-[270px]  bg-slate-100 qs:center qs:bg-white "
+              className="w-[400px] h-[440px] qs:h-[300px] qs:w-[270px]   qs:center  "
             />
           </div>
           <div className=" h-[400px] w-[380px] qs:-ml-[320px]  qs:mt-[440px]   ">
@@ -147,10 +146,14 @@ export default function ProductDetail() {
         </div>
       </div>
 
-      <div className={` mt-24  qs:mt-[540px] ${darkMode?"text-white":""}`} >
+      <div className={` mt-24  qs:mt-[540px] ${darkMode ? "text-white" : ""}`}>
         <h1 className="text-primary text-4xl font_1">Reviews</h1>
         {product?.reviews?.map((review) => (
-          <div className={` border-[5px]  border-white p-6 bg-[#f1f5f9] ${darkMode?"bg-dark":""}`}>
+          <div
+            className={` border-[5px]  border-white p-6 bg-[#f1f5f9] ${
+              darkMode ? "bg-dark" : ""
+            }`}
+          >
             <h2> {review.reviewerName}</h2>
             {/* <p>{format(review.date,'MM / EEE-YYY')}</p> */}
             <p>{formatDistanceToNow(review.date, { addSuffix: true })}</p>

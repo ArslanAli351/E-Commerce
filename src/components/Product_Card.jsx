@@ -1,3 +1,5 @@
+// ==========USE React Stars==========
+
 import img from "../assets/game.png";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";

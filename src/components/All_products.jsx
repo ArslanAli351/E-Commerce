@@ -1,15 +1,8 @@
-import ReactStars from "react-stars";
-import img from "../assets/game.png";
-import Keyboardimg from "../assets/Keyboard img.png";
-import Ledimg from "../assets/Led img.png";
-import Footer from "../components/Footer";
 import Navbare from "../components/Navbare";
 import useProduct from "./hooks/useProducts";
 import Product_Card from "./Product_Card";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
-// import Navbare from "./components/Navbare";
 
 export default function All_product() {
   const { products, loading, error } = useProduct("limit=4&&skip=140");
@@ -20,6 +13,7 @@ export default function All_product() {
       <Navbare />
 
       <div className="mt-[140px]   w-[90%] ml-[70px] qs:border-2 qs:ml-4">
+
         <div>
           <div className="w-[100px] h-10 ">
             <span className={`text-sm font_1 ${darkMode ? "text-white" : ""}`}>
@@ -45,8 +39,10 @@ export default function All_product() {
           </div>
         </div>
         <div className=" flex justify-evenly flex-wrap gap-10 items-center  ">
+        {loading ? "loading...." : null}
+        {error}
           {products?.map((item) => (
-            <>
+            <div key={item.id}>
               <Product_Card
                 key={item.id}
                 image={item.thumbnail}
@@ -56,7 +52,7 @@ export default function All_product() {
                 rating={item.rating}
                 id={item.id}
               />
-            </>
+            </div>
           ))}
         </div>
 

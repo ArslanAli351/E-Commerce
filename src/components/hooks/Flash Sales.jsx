@@ -32,7 +32,7 @@ export default function Flash_Sales() {
             {loading ? "loading...." : null}
             {error}
         {products?.map((item) => (
-          <>
+            <div key={item.id}>
               <Product_Card
                 key={item.id}
                 image={item.thumbnail}
@@ -42,7 +42,7 @@ export default function Flash_Sales() {
                 rating={item.rating}
                 id={item.id}
               />
-          </>
+          </div>
         ))}
   
         </div>

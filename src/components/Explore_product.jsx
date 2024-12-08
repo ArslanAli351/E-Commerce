@@ -4,7 +4,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import Product_Card from "./Product_Card";
 import { Link } from "react-router-dom";
 import useProduct from "./hooks/useProducts";
-import ReactStars from "react-stars";
 import { useSelector } from "react-redux";
 
 export default function Explore_Product() {
@@ -35,7 +34,7 @@ export default function Explore_Product() {
         {loading ? "loading...." : null}
         {error}
         {products?.map((item) => (
-        <>
+            <div key={item.id}>
             <Product_Card
               key={item.id}
               image={item.thumbnail}
@@ -45,7 +44,7 @@ export default function Explore_Product() {
               rating={item.rating}
               id={item.id}
             />
-        </>
+        </div>
       ))}
                 </div>
         <div className="center font_1">

@@ -28,17 +28,16 @@ export default function Slider() {
           loop={true}
           slidesPerView={"auto"}
           coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
-          Paginatio
+          // Pagination
           autoplay={{ delay: 300 }}
           modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         >
           {loading ? "loading...." : null}
           {error}
           {result?.map((item) => (
-            <SwiperSlide>
-              <div className="group border-2 flex   gap-4 relative bg-[#F5F5F5] w-[270px] h-[350px] ml-16 qs:m-0">
+            <SwiperSlide key={item.id}>
+              <div  className="group border-2 flex   gap-4 relative bg-[#F5F5F5] w-[270px] h-[350px] ml-16 qs:m-0">
                 <Product_Card
-                  key={item.id}
                   image={item.thumbnail}
                   name={item.title}
                   price={item.price}

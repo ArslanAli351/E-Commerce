@@ -8,7 +8,7 @@ export default function SetSlider() {
       {loading ? "loading...." : null}
       {error}
       {products?.map((item) => (
-        <>
+            <div key={item.id}>
           <Product_Card
             key={item.id}
             image={item.thumbnail}
@@ -18,7 +18,7 @@ export default function SetSlider() {
             rating={item.rating}
             id={item.id}
           />
-        </>
+        </div>
       ))}
     </>
   );

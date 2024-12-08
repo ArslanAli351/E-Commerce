@@ -46,7 +46,6 @@ export default function Footer() {
           <p>Contact</p>
         </div>
         <div className="w-[198px]  h-[210px] gap-4 flex flex-col mt-[120px] qs:hidden">
-          {/* <h1 className="font-bold	font_1">Download App</h1> */}
           <img src={Frame} alt="" />
         </div>
       </div>
